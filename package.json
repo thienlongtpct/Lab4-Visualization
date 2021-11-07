@@ -10,15 +10,8 @@
   },
   "author": "Vo Minh Thien Long",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "parcel-bundler": "^1.12.5",
-    "three": "^0.123.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "file-loader": "^6.2.0",
-    "gh-pages": "^3.2.3",
-    "webpack": "^5.10.0",
-    "webpack-cli": "^4.2.0"
+    "gh-pages": "^3.2.3"
   }
 }
