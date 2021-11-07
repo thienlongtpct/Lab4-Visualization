@@ -6,7 +6,7 @@
   "homepage": "http://thienlongtpct.github.io/lab4-visualiztion",
   "scripts": {
     "start": "node app.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d ."
   },
   "author": "Vo Minh Thien Long",
   "license": "ISC",
