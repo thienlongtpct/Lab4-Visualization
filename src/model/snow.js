@@ -1,4 +1,4 @@
-import * as THREE from '/build/three.module.js';
+import * as THREE from '../../node_modules/three/build/three.module.js';
 
 export default class Snow {
     constructor() {
@@ -15,7 +15,7 @@ export default class Snow {
         let flakeMesh = new THREE.Mesh(flakeGeometry, flakeMaterial);
         flakeMesh.position.set(
             (Math.random() - 0.5) * 150,
-            (Math.random() - 0.0) * 500,
+            (Math.random()) * 500,
             (Math.random() - 0.5) * 150
         );
         snow.add(flakeMesh);

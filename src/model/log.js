@@ -1,4 +1,4 @@
-import * as THREE from '/build/three.module.js';
+import * as THREE from '../../node_modules/three/build/three.module.js';
 
 export default class Log {
     constructor(x, y, z, alpha){
@@ -9,14 +9,7 @@ export default class Log {
 
     LogInit(){
         let group = new THREE.Group();
-
-        let brownMaterial = new THREE.MeshPhongMaterial({color: 0x3d2817}); // brown
-        let greenMaterial = new THREE.MeshPhongMaterial({color: 0x2d4c1e}); // green
-        let creamMaterial = new THREE.MeshPhongMaterial({color: 0xd7ead2}); // cream
-        let whiteMaterial = new THREE.MeshPhongMaterial({color: 0xffffff}); // white
-        let yellowMaterial = new THREE.MeshPhongMaterial({color: 0x7cff00}); //yellow
-
-
+        let brownMaterial = new THREE.MeshPhongMaterial({color: 0x3d2817});
 
         let c0 = new THREE.Mesh(new THREE.CylinderGeometry(2, 2, 12, 4, 1), brownMaterial);
         c0.position.y = 6;

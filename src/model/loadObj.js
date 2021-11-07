@@ -1,19 +1,16 @@
-import * as THREE from '/build/three.module.js';
-import {OBJLoader} from '/jsm/loaders/OBJLoader.js';
+import * as THREE from '../../node_modules/three/build/three.module.js';
+import {OBJLoader} from '../../node_modules/three/examples/jsm/loaders/OBJLoader.js';
 
 export default function (scene){
     const loader = new OBJLoader();
-    
-    loader.load('../resources/obj/tent_pole.obj',
-        // called when resource is loaded
+
+    loader.load('./resources/obj/tent_pole.obj',
         function (object) {
-
             object.traverse(function (child) {
-
                 if (child instanceof THREE.Mesh) {
                     child.material = new THREE.MeshPhysicalMaterial({color :0xfe1f14});
                     child.castShadow = true;
-                    child.receiveShadow = true;             
+                    child.receiveShadow = true;
                 }
             });
 
@@ -24,19 +21,6 @@ export default function (scene){
             object.rotateY(Math.PI );
             object.scale.set(10, 10, 10);
             scene.add(object);
-        },
-
-        // called when loading is in progresses
-        function (xhr) {
-
-            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-
-        },
-        // called when loading has errors
-        function (error) {
-
-            console.log('An error happened');
-
         }
     );
 }

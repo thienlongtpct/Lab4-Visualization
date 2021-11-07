@@ -6,13 +6,13 @@
   "homepage": "http://thienlongtpct.github.io/lab4-visualiztion",
   "scripts": {
     "start": "node app.js",
-    "predeploy": "npm install",
     "deploy": "gh-pages -d ."
   },
   "author": "Vo Minh Thien Long",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "parcel-bundler": "^1.12.5",
     "three": "^0.123.0"
   },
   "devDependencies": {

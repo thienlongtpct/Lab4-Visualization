@@ -1,4 +1,4 @@
-import * as THREE from '/build/three.module.js';
+import * as THREE from '../../node_modules/three/build/three.module.js';
 
 export default class Sky {
     constructor() {
@@ -10,7 +10,7 @@ export default class Sky {
         let skyGeo = new THREE.SphereBufferGeometry(1000, 64, 64);
         const textureLoader = new THREE.TextureLoader();
 
-        let map = textureLoader.load("../resources/img/night.jpg");
+        let map = textureLoader.load("./resources/img/night.jpg");
         let skyMat = new THREE.MeshBasicMaterial({
             side: THREE.BackSide,
             color: 0xf494ce,

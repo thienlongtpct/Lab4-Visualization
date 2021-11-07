@@ -1,14 +1,14 @@
-import * as THREE from '/three.module.js';
-import {OrbitControls} from '/jsm/controls/OrbitControls.js';
-import {Reflector} from '/jsm/objects/Reflector.js';
+import * as THREE from '../node_modules/three/build/three.module.js';
+import {OrbitControls} from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
+import {Reflector} from '../node_modules/three/examples/jsm/objects/Reflector.js';
 
-import Sky from "../model/sky.js";
-import Snow from "../model/snow.js";
-import Tree from "../model/tree.js";
-import Moon from "../model/moon.js";
-import SnowMan from "../model/snowMan.js";
-import Log from "../model/log.js";
-import * as Tent from "../model/loadObj.js";
+import Sky from "./model/sky.js";
+import Snow from "./model/snow.js";
+import Tree from "./model/tree.js";
+import Moon from "./model/moon.js";
+import SnowMan from "./model/snowMan.js";
+import Log from "./model/log.js";
+import * as Tent from "./model/loadObj.js";
 
 const scene = new THREE.Scene();
 
@@ -35,7 +35,7 @@ controls.maxDistance = 1000;
 let planeGeo = new THREE.CylinderGeometry( 1200, 1200, 20, 64 );
 const textureLoader1 = new THREE.TextureLoader();
 
-let map1 = textureLoader1.load("../resources/img/snow.jpg");
+let map1 = textureLoader1.load("./resources/img/snow.jpg");
 map1.wrapS = THREE.RepeatWrapping;
 map1.wrapT = THREE.RepeatWrapping;
 map1.repeat.set( 60, 60 );
@@ -57,7 +57,7 @@ scene.add( plane );
 let lakeGeo = new THREE.CylinderGeometry( 100, 100, 20, 60 );
 const textureLoader2 = new THREE.TextureLoader();
 
-let map2 = textureLoader2.load("../resources/img/water-ice2.jpg");
+let map2 = textureLoader2.load("./resources/img/water-ice.jpg");
 map2.wrapS = THREE.RepeatWrapping;
 map2.wrapT = THREE.RepeatWrapping;
 map2.repeat.set( 1, 1 );
@@ -78,7 +78,7 @@ scene.add( lake );
 let lakeGeo1 = new THREE.CylinderGeometry( 30, 30, 20, 60 );
 const textureLoader3 = new THREE.TextureLoader();
 
-let map3 = textureLoader3.load("../resources/img/water.png");
+let map3 = textureLoader3.load("./resources/img/water.png");
 map3.wrapS = THREE.RepeatWrapping;
 map3.wrapT = THREE.RepeatWrapping;
 map3.repeat.set( 3, 3 );
@@ -185,13 +185,10 @@ let centerLight = new THREE.PointLight(0xee693c, 5, 100, 2);
 centerLight.position.set(50, 2, 20);
 scene.add(centerLight);
 
-////////////////////////////////////////////////////////////////////////
 function update(){
-    //update func for model
     //snow fall
     snow.update();
     snowGroup.translateY(-0.1);
-    // console.log()
     if(snowGroup.position.y < -200){
         snowGroup.position.y =0;
     }
