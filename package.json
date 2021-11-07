@@ -6,6 +6,7 @@
   "homepage": "http://thienlongtpct.github.io/lab4-visualiztion",
   "scripts": {
     "start": "node app.js",
+    "predeploy": "npm install",
     "deploy": "gh-pages -d ."
   },
   "author": "Vo Minh Thien Long",

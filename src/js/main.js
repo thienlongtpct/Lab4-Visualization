@@ -1,6 +1,6 @@
-import * as THREE from '../../node_modules/three/build/three.module.js';
-import {OrbitControls} from '../../node_modules/three/examples/jsm/controls/OrbitControls.js';
-import {Reflector} from '../../node_modules/three/examples/jsm/objects/Reflector.js';
+import * as THREE from '/three.module.js';
+import {OrbitControls} from '/jsm/controls/OrbitControls.js';
+import {Reflector} from '/jsm/objects/Reflector.js';
 
 import Sky from "../model/sky.js";
 import Snow from "../model/snow.js";
